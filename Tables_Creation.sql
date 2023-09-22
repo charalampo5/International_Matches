@@ -1,4 +1,5 @@
 --Creation Of Tables--
+
 CREATE TABLE goalscorers (
 	match_date DATE NOT NULL,
 	home_team VARCHAR(50) NOT NULL,

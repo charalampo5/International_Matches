@@ -57,9 +57,11 @@ SELECT COUNT(*) FROM shootouts
 
 --Countries That Have Lost In Penalties Most Times-- 
 SELECT 
-(CASE WHEN home_team = winner THEN away_team
-ELSE home_team
-END) AS loser, COUNT(*) AS number_of_games
+(CASE 
+	WHEN home_team = winner THEN away_team
+	ELSE home_team
+	END) AS loser, 
+COUNT(*) AS number_of_games
 FROM shootouts
 GROUP BY loser
 ORDER BY COUNT(*) DESC;
